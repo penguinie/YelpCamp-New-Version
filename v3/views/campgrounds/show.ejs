@@ -1,0 +1,69 @@
+<% include ../partials/header %>
+<div class="ui grid container">
+  <div class="four wide column">
+    <div class="ui vertical menu">
+      <div class="item">
+        <div class="header">Campgrounds</div>
+        <div class="menu">
+          <a class="item active">Details</a>
+          <a class="item">Location</a>
+        </div>
+      </div>
+      <div class="item">
+        <div class="header">Support</div>
+        <div class="menu">
+          <a class="item">E-mail Support</a>
+          <a class="item">FAQs</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="twelve wide stretched column">
+    <div class="ui segment camp-details">
+      <img id="camp-details-image" src="<%= campground.image %>">
+      <div class="ui top right attached label create-date">
+        <p><em>Created On : <%= campground.created.toDateString() %></em></p>
+      </div>
+      <div class="ui bottom attached label">
+        <p class="p-detail-title"><%= campground.title %></p>
+        <p class="p-detail">Description : <%= campground.description %></p>
+        <p class="p-detail"><em>Submitted By</em><span></span></p>
+        <button class="ui mini green button">Edit</button>
+        <button class="ui mini red button">Delete</button>
+      </div>
+      <div class="ui bottom right attached label price">
+        <span>$9.00/night</span>
+      </div>
+    </div>
+  </div>
+  <div class="four wide column">
+  </div>
+  <div class="twelve wide stretched column">
+    <div class="ui segment">
+      <a class="ui orange button" href="/campgrounds/<%=campground._id%>/reviews/new">Add Review</a>
+      <div class="ui comments">
+        <h3 class="ui dividing header">Reviews</h3>
+        <%comments.forEach(function(comment){%>
+        <div class="comment">
+          <a class="avatar">
+            <img src="https://semantic-ui.com/images/avatar/small/matt.jpg">
+          </a>
+          <div class="content">
+            <a class="author"><%=comment.author%></a>
+            <div class="metadata">
+              <span class="date">Today at 5:42PM</span>
+            </div>
+            <div class="text">
+              <%=comment.description%>
+            </div>
+            <div class="actions">
+              <a class="reply">Reply</a>
+            </div>
+          </div>
+        </div>
+        <%})%>
+      </div>
+    </div>
+  </div>
+</div>
+<% include ../partials/footer %>

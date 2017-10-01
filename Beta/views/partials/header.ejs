@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>YelpCamp</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+  </head>
+  <body>
+    <div class="ui huge inverted pointing menu">
+      <div class="item">
+        <img src="https://www.graphicsprings.com/filestorage/stencils/84920042aba1b1b8a829087aa6ebe21b.svg">
+      </div>
+      <div class="header item">
+        <a href="/">YelpCamp</a>
+      </div>
+      <a href="#" class="item">About Us</a>
+      <div class="right menu">
+        <% if(!currentUser) { %>
+          <div class="item">
+            <a href="/register" class="ui inverted yellow button">Sign Up</a>
+          </div>
+          <div class="item">
+            <a href="/login" class="ui inverted red button">Log In</a>
+          </div>
+        <% } else { %>
+          <div class="item">
+            <a class="ui label">
+              <img class="ui right spaced avatar image" src="https://semantic-ui.com/images/avatar/small/elliot.jpg">
+              <%=currentUser.name%>
+            </a>
+          </div>
+          <div class="item">
+            <a href="/logout" class="ui inverted red button">Log Out</a>
+          </div>
+        <% } %>
+      </div>
+    </div>
+    <div id="main-content">
+      <div id="sub-content">
+        <%if(success && success.length>0) {%>
+        <div class="ui success message container">
+          <i class="close icon"></i>
+          <div class="header">
+            <%=success%>
+          </div>
+          <p>Success !</p>
+        </div>
+        <% } %>
+        <%if(error && error.length>0) {%>
+        <div class="ui negative message container">
+          <i class="close icon"></i>
+          <div class="header">
+            <%=error%>
+          </div>
+          <p>Please do not try to edit/delete posts/comments which does not belonged to you. This will lead to the violation of our terms and conditions.</p>
+        </div>
+        <% } %>
+        <%if(warning && warning.length>0) {%>
+        <div class="ui warning message container">
+          <i class="close icon"></i>
+          <div class="header">
+            <%=warning%>
+          </div>
+          <p>Please login with your YelpCamp username and password. If you are not registered, please register yourself first.</p>
+        </div>
+        <% } %>
+        <%if(register && register.length>0) {%>
+        <div class="ui warning message container">
+          <i class="close icon"></i>
+          <div class="header">
+            <%=register%>
+          </div>
+          <p>Error occured while registering. Please sign up again.</p>
+        </div>
+        <% } %>

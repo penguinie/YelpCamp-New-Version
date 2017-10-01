@@ -1,0 +1,19 @@
+<% include ../partials/header %>
+<div class="fillup">
+    <form class="ui inverted form" action="/campgrounds/<%=campground._id%>?_method=PUT" method="POST">
+      <div class="field">
+        <h1 class="form-title">UPDATE CAMPGROUND</h1>
+      </div>
+      <div class="field">
+        <input type="text" name="campground[title]" placeholder="Title" value="<%=campground.title%>" required>
+      </div>
+      <div class="field">
+        <input type="text" name="campground[image]" placeholder="Image" value="<%=campground.image%>" required>
+      </div>
+      <div class="field">
+        <textarea rows="5" name="campground[escription]" placeholder="Description" required><%=campground.description%></textarea>
+      </div>
+      <button class="ui button submit-button" type="submit">Update Campground</button>
+    </form>
+</div>
+<% include ../partials/footer %>

@@ -1,0 +1,108 @@
+html,body{
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+}
+body{
+  background-image: url('http://www.wallpapersbrowse.com/images/yq/yqlztdi.jpg');
+}
+#main-content{
+  min-height: 100%;
+  position: relative;
+}
+#sub-content{
+  padding-bottom: 10em;
+}
+footer{
+  margin-top: 4em;
+  border-top: 0.3em solid purple;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height : 7em;
+  background-color: #1f1f21;
+  text-align : center;
+  color : #bebec6;
+}
+#foot-p{
+  padding-top: 2.8em;
+}
+.imageshow{
+  position: relative;
+  width:100%;
+  height:13em;
+}
+.more{
+  position: absolute;
+  left: 5.5em;
+  top: 5.5em;
+  opacity: 0;
+}
+.more a{
+  color: white;
+  text-decoration: none;
+}
+.contain:hover .imageshow{
+  opacity: 0.5;
+}
+.contain:hover .more{
+  opacity: 1;
+}
+#jumbotron{
+  opacity: 0.8
+}
+#msg{
+  text-align: center;
+}
+#ui-head{
+  font-size: 5em;
+}
+#ui-link{
+  color: white;
+}
+#camp-name{
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 9px;
+}
+#thumb{
+  padding: 0px;
+}
+.fillup{
+  width: 30%;
+  margin: 5em auto;
+  background-color: #1f1f21;
+  padding: 2em;
+  border-radius: 1%;
+}
+.submit-button{
+  width: 100%;
+  margin-top: 1em!important;
+}
+.form-title{
+  color: white;
+  font-family: Raleway, sans-serif;
+  text-align: center;
+}
+.camp-details{
+  padding: 0em 0em 2em 0em!important;
+}
+#camp-details-image{
+  width: 100%;
+  height: 45em;
+}
+.create-date{
+  border-radius: 0%!important;
+}
+.p-detail-title{
+  font-size: 1.5em;
+  color: #3771ce;
+}
+.p-detail{
+  font-size: 1.2em;
+}
+.price{
+  font-size: 1.1em!important;
+  color: #3771ce!important;
+}

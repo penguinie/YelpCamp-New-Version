@@ -1,0 +1,28 @@
+<% include ../partials/header %>
+    <div id="jumbotron" class="ui grid container">
+      <div class="row">
+        <div class="column">
+          <div id="msg" class="ui message">
+            <h1 id="ui-head" class="ui header">Welcome to YelpCamp</h1>
+            <button class="ui primary button">
+              <a id="ui-link" href="/campgrounds/new">Add new Campground</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui four column grid container">
+      <% campgrounds.forEach(function(campground){ %>
+        <div class="column">
+          <div id="thumb" class="ui segment contain">
+            <img class="imageshow" src=" <%= campground.image %> ">
+            <button class="ui primary button more">
+              <a href="/campgrounds/<%=campground._id%>">More Info</a>
+            </button>
+            <p id="camp-name"> <%= campground.title %> </p>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+<% include ../partials/footer %>

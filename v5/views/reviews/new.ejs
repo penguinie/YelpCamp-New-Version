@@ -1,0 +1,13 @@
+<% include ../partials/header %>
+<div class="fillup">
+    <form class="ui inverted form" action="/campgrounds/<%=campground._id%>/reviews" method="POST">
+      <div class="field">
+        <h1 class="form-title">ADD NEW REVIEW</h1>
+      </div>
+      <div class="field">
+        <textarea rows="5" name="description" placeholder="Description" required></textarea>
+      </div>
+      <button class="ui button submit-button" type="submit">Add Review</button>
+    </form>
+</div>
+<% include ../partials/footer %>

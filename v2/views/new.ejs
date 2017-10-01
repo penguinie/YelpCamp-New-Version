@@ -1,0 +1,20 @@
+<% include partials/header %>
+<div class="fillup">
+    <form class="ui inverted form" action="/campgrounds" method="POST">
+      <div class="field">
+        <h1 class="form-title">ADD NEW CAMPGROUND</h1>
+      </div>
+      <div class="field">
+        <input type="text" name="title" placeholder="Title" required>
+      </div>
+      <div class="field">
+        <input type="text" name="image" placeholder="Image" required>
+      </div>
+      <div class="field">
+        <textarea rows="5" name="description" placeholder="Description" required></textarea>
+      </div>
+      <button class="ui button submit-button" type="submit">Add Campground</button>
+    </form>
+</div>
+
+<% include partials/footer %>
